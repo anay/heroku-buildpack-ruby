@@ -563,6 +563,10 @@ WARNING
           }
           env_vars["BUNDLER_LIB_PATH"] = "#{bundler_path}"
           puts "Running: #{bundle_command}"
+          puts "Running: `ruby -v`"
+          puts "Running: `gem -v`"
+          puts "Running: `gem env`"
+
           instrument "ruby.bundle_install" do
             bundle_time = Benchmark.realtime do
               bundler_output << pipe("#{bundle_command} --no-clean", out: "2>&1", env: env_vars, user_env: true)
