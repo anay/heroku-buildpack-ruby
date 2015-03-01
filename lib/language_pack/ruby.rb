@@ -354,7 +354,7 @@ ERROR_MSG
 
       topic "Updating system gems"
 
-      system_gem_update_response = run_no_pipe("REALLY_GEM_UPDATE_SYSTEM=1 gem update --system")
+      system_gem_update_response = run_no_pipe("REALLY_GEM_UPDATE_SYSTEM=1 sudo gem update --system")
       topic system_gem_update_response
 
       @metadata.write("buildpack_ruby_version", ruby_version.version)
