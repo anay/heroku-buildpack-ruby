@@ -356,7 +356,6 @@ ERROR_MSG
       topic "Updating system gems #{`ruby -v`}"
       topic "Updating system gems #{`gem -v`}"
       topic "Updating system gems #{`ls -l #{slug_vendor_ruby}/bin/`}"
-      topic "Updating system gems #{`./#{slug_vendor_ruby}/bin/gem -v`}"
       topic "Updating system gems #{`./#{slug_vendor_ruby}/bin/gem env`}"
 
       #slug_vendor_ruby
