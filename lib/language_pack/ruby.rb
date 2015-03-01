@@ -352,6 +352,7 @@ ERROR_MSG
         run("ln -s ../#{vendor_bin} #{app_bin_dir}")
       end
 
+      topic "Updating system gems"
       run("gem update --system")
 
       @metadata.write("buildpack_ruby_version", ruby_version.version)
