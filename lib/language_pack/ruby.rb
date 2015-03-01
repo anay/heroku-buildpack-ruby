@@ -340,6 +340,8 @@ ERROR_MSG
             FileUtils.rm(sha_file)
           else
             @fetchers[:mri].fetch_untar("#{ruby_version.version}.tgz")
+            FileUtils.mkdir_p("/app/#{slug_vendor_ruby}")
+            FileUtils.cp_r("#{slug_vendor_ruby}/*", "/app/#{slug_vendor_ruby}/")
           end
         end
       end
