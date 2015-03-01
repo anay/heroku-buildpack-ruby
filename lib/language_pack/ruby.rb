@@ -353,7 +353,6 @@ ERROR_MSG
         run("ln -s ../#{vendor_bin} #{app_bin_dir}")
       end
 
-      puts "Running: #{bundle_command}"
       puts "Running: #{`ruby -v`.to_s}"
       puts "Running: #{`which ruby`.to_s}"
       puts "Running: #{`which gem`.to_s}"
