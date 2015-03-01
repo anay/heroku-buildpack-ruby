@@ -564,7 +564,7 @@ WARNING
           env_vars["BUNDLER_LIB_PATH"] = "#{bundler_path}"
           puts "Running: #{bundle_command}"
           puts "Running: #{`ruby -v`.to_s}"
-          puts "Running: #{`gem`.to_s}"
+          puts "Running: #{`echo $PATH`.to_s}"
           puts "Running: #{`gem env`.to_s}"
 
           instrument "ruby.bundle_install" do
