@@ -353,6 +353,13 @@ ERROR_MSG
         run("ln -s ../#{vendor_bin} #{app_bin_dir}")
       end
 
+      puts "Running: #{bundle_command}"
+      puts "Running: #{`ruby -v`.to_s}"
+      puts "Running: #{`which ruby`.to_s}"
+      puts "Running: #{`which gem`.to_s}"
+      puts "Running: #{`echo $PATH`.to_s}"
+
+
       #slug_vendor_ruby
       # system_gem_update_response = run_no_pipe("REALLY_GEM_UPDATE_SYSTEM=1 sudo gem update --system")
       # topic system_gem_update_response
@@ -567,7 +574,6 @@ WARNING
           puts "Running: #{`which ruby`.to_s}"
           puts "Running: #{`which gem`.to_s}"
           puts "Running: #{`echo $PATH`.to_s}"
-          puts "Running: #{`cat /tmp/ruby-1.9.2/bin/gem`.to_s}"
 
           instrument "ruby.bundle_install" do
             bundle_time = Benchmark.realtime do
