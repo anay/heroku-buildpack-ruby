@@ -341,7 +341,7 @@ ERROR_MSG
           else
             @fetchers[:mri].fetch_untar("#{ruby_version.version}.tgz")
             FileUtils.mkdir_p("/app/#{slug_vendor_ruby}")
-            FileUtils.cp_r("#{slug_vendor_ruby}/*", "/app/#{slug_vendor_ruby}/")
+            FileUtils.cp_r("#{slug_vendor_ruby}", "/app/vendor/")
           end
         end
       end
