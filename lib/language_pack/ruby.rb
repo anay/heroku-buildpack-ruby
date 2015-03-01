@@ -140,8 +140,9 @@ private
       elsif ruby_version.ruby_version == "1.8.7"
         @slug_vendor_base = "vendor/bundle/1.8"
       else
-        @slug_vendor_base = run_no_pipe(%q(ruby -e "require 'rbconfig';puts \"vendor/bundle/#{RUBY_ENGINE}/#{RbConfig::CONFIG['ruby_version']}\"")).chomp
-        error "Problem detecting bundler vendor directory: #{@slug_vendor_base}" unless $?.success?
+        # @slug_vendor_base = run_no_pipe(%q(ruby -e "require 'rbconfig';puts \"vendor/bundle/#{RUBY_ENGINE}/#{RbConfig::CONFIG['ruby_version']}\"")).chomp
+        # error "Problem detecting bundler vendor directory: #{@slug_vendor_base}" unless $?.success?
+        @slug_vendor_base = "vendor/bundle/1.9"
         @slug_vendor_base
       end
     end
@@ -355,8 +356,8 @@ ERROR_MSG
       topic "Updating system gems #{`ruby -v`}"
       topic "Updating system gems #{`gem -v`}"
 
-      system_gem_update_response = run_no_pipe("REALLY_GEM_UPDATE_SYSTEM=1 sudo gem update --system")
-      topic system_gem_update_response
+      # system_gem_update_response = run_no_pipe("REALLY_GEM_UPDATE_SYSTEM=1 sudo gem update --system")
+      # topic system_gem_update_response
 
       @metadata.write("buildpack_ruby_version", ruby_version.version)
 
