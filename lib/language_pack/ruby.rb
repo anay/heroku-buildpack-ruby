@@ -574,8 +574,8 @@ WARNING
           puts "Running: #{`which ruby`.to_s}"
           puts "Running: #{`which gem`.to_s}"
           puts "Running: #{`echo $PATH`.to_s}"
-          puts "Running: #{`cat /tmp/ruby-1.9.2/bin/ruby`.to_s}"
-          puts "Running: #{`cat /tmp/ruby-1.9.2/bin/gem`.to_s}"
+          puts "Running: #{`cat /tmp/ruby-1.9.2/bin/ruby`}"
+          puts "Running: #{`cat /tmp/ruby-1.9.2/bin/gem`}"
 
           instrument "ruby.bundle_install" do
             bundle_time = Benchmark.realtime do
