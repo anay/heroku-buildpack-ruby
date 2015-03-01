@@ -353,7 +353,8 @@ ERROR_MSG
       end
 
       topic "Updating system gems"
-      run("gem update --system")
+      system_gem_update_response = run_no_pipe("gem update --system")
+      topic system_gem_update_response
 
       @metadata.write("buildpack_ruby_version", ruby_version.version)
 
