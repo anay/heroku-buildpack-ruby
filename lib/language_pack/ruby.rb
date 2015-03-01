@@ -354,6 +354,7 @@ ERROR_MSG
       end
 
       puts "Running: #{`ruby -v`.to_s}"
+      puts "Running: #{`gem -v`.to_s}"
       puts "Running: #{`which ruby`.to_s}"
       puts "Running: #{`which gem`.to_s}"
       puts "Running: #{`echo $PATH`.to_s}"
