@@ -567,7 +567,7 @@ WARNING
           puts "Running: #{`which ruby`.to_s}"
           puts "Running: #{`which gem`.to_s}"
           puts "Running: #{`echo $PATH`.to_s}"
-          puts "Running: #{`gem env`.to_s}"
+          puts "Running: #{`gem`.to_s}"
 
           instrument "ruby.bundle_install" do
             bundle_time = Benchmark.realtime do
