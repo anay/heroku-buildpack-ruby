@@ -358,7 +358,8 @@ ERROR_MSG
       puts "Running: #{`which ruby`.to_s}"
       puts "Running: #{`which gem`.to_s}"
       puts "Running: #{`echo $PATH`.to_s}"
-      puts "Running: #{`ls -l /app/vendor/`.to_s}"
+      puts "Running: #{slug_vendor_ruby}"
+      puts "Running: #{`ls -l #{slug_vendor_ruby}/`.to_s}"
 
 
       #slug_vendor_ruby
