@@ -352,7 +352,7 @@ ERROR_MSG
         run("ln -s ../#{vendor_bin} #{app_bin_dir}")
       end
 
-      topic "Updating system gems"
+      topic "Updating system gems #{`whoami`}"
 
       system_gem_update_response = run_no_pipe("REALLY_GEM_UPDATE_SYSTEM=1 sudo gem update --system")
       topic system_gem_update_response
