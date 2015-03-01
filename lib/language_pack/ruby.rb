@@ -353,11 +353,6 @@ ERROR_MSG
         run("ln -s ../#{vendor_bin} #{app_bin_dir}")
       end
 
-      topic "Updating system gems #{`ruby -v`}"
-      topic "Updating system gems #{`gem -v`}"
-      topic "Updating system gems #{`ls -l #{slug_vendor_ruby}/bin/`}"
-      topic "Updating system gems #{`./#{slug_vendor_ruby}/bin/gem env`}"
-
       #slug_vendor_ruby
       # system_gem_update_response = run_no_pipe("REALLY_GEM_UPDATE_SYSTEM=1 sudo gem update --system")
       # topic system_gem_update_response
@@ -566,7 +561,7 @@ WARNING
             "RUBYOPT"                       => syck_hack,
             "NOKOGIRI_USE_SYSTEM_LIBRARIES" => "true"
           }
-          env_vars["BUNDLER_LIB_PATH"] = "#{bundler_path}" if ruby_version.ruby_version == "1.8.7"
+          env_vars["BUNDLER_LIB_PATH"] = "#{bundler_path}"
           puts "Running: #{bundle_command}"
           instrument "ruby.bundle_install" do
             bundle_time = Benchmark.realtime do
