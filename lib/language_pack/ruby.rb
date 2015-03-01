@@ -356,8 +356,8 @@ ERROR_MSG
       topic "Updating system gems #{`ruby -v`}"
       topic "Updating system gems #{`gem -v`}"
       topic "Updating system gems #{`ls -l #{slug_vendor_ruby}/bin/`}"
-      topic "Updating system gems #{`#{slug_vendor_ruby}/bin/gem -v`}"
-      topic "Updating system gems #{`#{slug_vendor_ruby}/bin/gem env`}"
+      topic "Updating system gems #{`./#{slug_vendor_ruby}/bin/gem -v`}"
+      topic "Updating system gems #{`./#{slug_vendor_ruby}/bin/gem env`}"
 
       #slug_vendor_ruby
       # system_gem_update_response = run_no_pipe("REALLY_GEM_UPDATE_SYSTEM=1 sudo gem update --system")
