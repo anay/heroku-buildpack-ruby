@@ -580,8 +580,6 @@ WARNING
           puts "Running: #{`which gem`.to_s}"
           puts "Running: #{`echo $PATH`.to_s}"
           puts "Value : #{`ls -l /app/vendor/`}"
-          puts "Running: #{`cat /tmp/ruby-1.9.2/bin/ruby`}"
-          puts "Running: #{`cat /tmp/ruby-1.9.2/bin/gem`}"
 
           instrument "ruby.bundle_install" do
             bundle_time = Benchmark.realtime do
